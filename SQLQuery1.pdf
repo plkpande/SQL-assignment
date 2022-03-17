@@ -1,0 +1,22 @@
+create database Assignment1
+
+create table Worker(wkname char(20), wkid int,city char(30), section char(20))
+insert into Worker values('ABC', 28, 'Wardha', 'A')
+insert into Worker values('ABCD', 25, 'NAGPUR', 'A')
+insert into Worker values('ABCDE', 27, 'Wardha', 'A')
+insert into Worker values('ABC', 28, 'PUNE', 'A')
+insert into Worker values('EFFABC', 28, 'HYDERABAD', 'A')
+insert into Worker values('WEABC', 30, 'NAGPUR', 'A')
+insert into Worker values('EABC', 31, 'Wardha', 'A')
+
+select * from Worker 
+
+select wkname, wkid, city from Worker where wkid between 27 and 30
+order by wkid desc 
+
+select wkname as Worker_name from Worker
+
+select Distinct City from Worker
+
+
+select top 5 * from Worker order by wkid desc
